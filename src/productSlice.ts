@@ -1,7 +1,8 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { Product } from "./types/index";
 
 interface CounterState {
-  value: Array<any>;
+  value: Array<Product>;
 }
 
 const initialState: CounterState = {
@@ -11,14 +12,14 @@ const initialState: CounterState = {
 // TODO: Type the payload with the proper product type
 const saveCurrentProduct = (
   state: CounterState,
-  action: PayloadAction<Array<any>>
+  action: PayloadAction<Product>
 ) => {
   state.value.push(action.payload);
 };
 
 const removeCurrentProduct = (
   state: CounterState,
-  action: PayloadAction<Array<any>>
+  action: PayloadAction<Product>
 ) => {
   state.value = state.value.filter((item) => item.id !== action.payload.id);
 };
