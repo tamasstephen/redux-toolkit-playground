@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { Product } from "./types/index";
+import type { Product } from "./types/index";
 
 interface CounterState {
   value: Array<Product>;
